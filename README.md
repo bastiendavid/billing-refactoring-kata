@@ -15,9 +15,9 @@ This service is currently sending our invoice data to our partner, eCorp.
 
 However, management has decided to no longer work with eCorp, and we must now send our invoice data to a new partner, casaDePapel.
 
-Our goal is to replace all the usages of the GoodOldBillingSystem by BrandNewBillingSystem.
+Our goal is to replace all the usages of GoodOldBillingSystem by BrandNewBillingSystem.
 
-#### Tips
+### Tips
 
 First try to create an abstraction, and then replace the old code by the new one.
 
