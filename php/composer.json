@@ -1,0 +1,12 @@
+{
+    "name": "billing-refactor/php",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "8.5"
+    },
+    "autoload": {
+        "psr-4": {"": "src/"}
+    },
+    "license": "MIT",
+    "require": {}
+}
