@@ -10,11 +10,14 @@ class BillingServiceTest extends TestCase
     {
 
         $oldBillingSystem = $this->createMock(OldBillingSystem::class);
-        $billingService = new BillingService();
-        $billingService->invoice(new Invoice(100, "dollar", "destination compnay"));
+        $billingService = new BillingService($oldBillingSystem);
 
+        $oldBillingSystem->expects($this->once())
+            ->method('invoice')
+            ->with($this->equalTo("100$ to destination company"));
 
-        $this->assertEquals(1, 2);
+        $billingService->invoice(new Invoice(100, Currency::dollar(), "destination company"));
+
 
     }
 
