@@ -15,8 +15,13 @@ class BillingService
 
     public function invoice(Invoice $invoice)
     {
+
+        // Imagine loads of code here
+        // ...
         $invoiceForBillingSystem = sprintf("%d%s to %s", $invoice->amount, $invoice->currency->symbol, $invoice->customer);
         $this->oldBillingSystem->invoice($invoiceForBillingSystem);
+        // ...
+        // Imagine loads of code here
 
 
     }
