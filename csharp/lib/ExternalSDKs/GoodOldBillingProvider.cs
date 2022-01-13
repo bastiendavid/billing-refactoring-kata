@@ -1,6 +1,6 @@
 using System;
 
-namespace lib.NotOurCode
+namespace lib.ExternalSDKs
 {
     /**
      * This code cannot be changed. It is provided by our billing service provider.

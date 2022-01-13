@@ -1,6 +1,6 @@
 using System;
 using lib;
-using lib.NotOurCode;
+using lib.ExternalSDKs;
 using Moq;
 using Xunit;
 
