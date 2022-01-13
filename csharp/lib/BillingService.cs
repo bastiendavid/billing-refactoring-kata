@@ -15,9 +15,9 @@ namespace lib
         {
             
             int amount = invoice.Amount;
-            string currency = invoice.Currency;
+            var currency = invoice.Currency;
             string companyName = invoice.CompanyName;
-            string invoiceForBillingSystem = amount + currency + " to " +  companyName;
+            string invoiceForBillingSystem = amount + currency.Symbol + " to " +  companyName;
             _oldBillingProvider.SendInvoice(invoiceForBillingSystem);
 
         }

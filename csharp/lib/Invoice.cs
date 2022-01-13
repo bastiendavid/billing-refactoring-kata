@@ -3,10 +3,10 @@ namespace lib
     public class Invoice
     {
         public int Amount { get; }
-        public string Currency { get; }
+        public Currency Currency { get; }
         public string CompanyName { get; }
 
-        public Invoice(int amount, string currency, string companyName)
+        public Invoice(int amount, Currency currency, string companyName)
         {
             Amount = amount;
             Currency = currency;

@@ -4,7 +4,17 @@ namespace lib
 {
     public class Currency
     {
+        public string Symbol { get; }
 
-        public const String DOLLAR = "$";
+        private Currency(string symbol)
+        {
+            Symbol = symbol;
+            throw new NotImplementedException();
+        }
+        
+        public static Currency Dollar()
+        {
+            return new Currency("$");
+        }
     }
 }
