@@ -1,5 +1,6 @@
 using System;
 using lib;
+using lib.NotOurCode;
 using Moq;
 using Xunit;
 

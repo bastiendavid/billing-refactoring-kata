@@ -1,4 +1,6 @@
-﻿namespace lib
+﻿using lib.NotOurCode;
+
+namespace lib
 {
     public class BillingService
     {
