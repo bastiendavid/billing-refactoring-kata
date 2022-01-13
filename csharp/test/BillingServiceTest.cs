@@ -11,7 +11,7 @@ namespace test
         public void TestBillingService()
         {
 
-            var billingProviderMock = new Mock<IGoodOldBillingProvider>();
+            var billingProviderMock = new Mock<GoodOldBillingProvider>();
             var service = new BillingService(billingProviderMock.Object);
             
             service.Invoice(new Invoice(100, Currency.DOLLAR, "Vance Refrigeration"));

@@ -4,9 +4,9 @@ namespace lib
 {
     public class BillingService
     {
-        private readonly IGoodOldBillingProvider _oldBillingProvider;
+        private readonly GoodOldBillingProvider _oldBillingProvider;
 
-        public BillingService(IGoodOldBillingProvider oldBillingProvider)
+        public BillingService(GoodOldBillingProvider oldBillingProvider)
         {
             _oldBillingProvider = oldBillingProvider;
         }
@@ -43,17 +43,12 @@ namespace lib
         public const String DOLLAR = "$";
     }
 
-    public interface IGoodOldBillingProvider
-    {
-        void SendInvoice(string invoiceContent);
-    }
-
     /**
      * This code cannot be changed. It is provided by our billing service provider.
      */
-    public class GoodOldBillingProvider : IGoodOldBillingProvider
+    public class GoodOldBillingProvider
     {
-        public void SendInvoice(string invoiceContent)
+        public virtual void SendInvoice(string invoiceContent)
         {
             throw new Exception("You are not supposed to call this code in the kata");
         }
