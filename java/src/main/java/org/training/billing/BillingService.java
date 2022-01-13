@@ -10,7 +10,10 @@ public class BillingService {
     }
 
     public void invoice(Invoice invoice) {
-        String invoiceForBillingSystem = String.format("%d%s to %s", invoice.amount, invoice.currency.symbol, invoice.companyName);
+        int amount = invoice.amount;
+        Currency currency = invoice.currency;
+        String companyName = invoice.companyName;
+        String invoiceForBillingSystem = String.format("%d%s to %s", amount, currency.symbol, companyName);
         billingSystem.invoice(invoiceForBillingSystem);
     }
 }

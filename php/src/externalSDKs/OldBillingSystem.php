@@ -1,10 +1,10 @@
 <?php
 
 
+namespace externalSDKs;
 /**
  * This code cannot be changed. It is provided by our billing service provider.
  */
-
 class OldBillingSystem
 {
 

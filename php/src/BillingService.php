@@ -1,6 +1,8 @@
 <?php
 
 
+use externalSDKs\OldBillingSystem;
+
 class BillingService
 {
     private $oldBillingSystem;
@@ -16,12 +18,14 @@ class BillingService
     public function invoice(Invoice $invoice)
     {
 
-        // Imagine loads of code here
+        // Imagine loads of existing code here
         // ...
+
         $invoiceForBillingSystem = sprintf("%d%s to %s", $invoice->amount, $invoice->currency->symbol, $invoice->customer);
         $this->oldBillingSystem->invoice($invoiceForBillingSystem);
+
         // ...
-        // Imagine loads of code here
+        // Imagine loads of existing code here
 
 
     }

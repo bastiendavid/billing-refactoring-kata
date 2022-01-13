@@ -1,6 +1,7 @@
 <?php
 
 
+use externalSDKs\OldBillingSystem;
 use PHPUnit\Framework\TestCase;
 
 class BillingServiceTest extends TestCase
