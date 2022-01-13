@@ -7,9 +7,6 @@ class BillingService
 {
     private $oldBillingSystem;
 
-    /**
-     * @param $oldBillingSystem
-     */
     public function __construct(OldBillingSystem $oldBillingSystem)
     {
         $this->oldBillingSystem = $oldBillingSystem;
@@ -21,7 +18,10 @@ class BillingService
         // Imagine loads of existing code here
         // ...
 
-        $invoiceForBillingSystem = sprintf("%d%s to %s", $invoice->amount, $invoice->currency->symbol, $invoice->customer);
+        $amount = $invoice->amount;
+        $symbol = $invoice->currency->symbol;
+        $customer = $invoice->customer;
+        $invoiceForBillingSystem = sprintf("%d%s to %s", $amount, $symbol, $customer);
         $this->oldBillingSystem->invoice($invoiceForBillingSystem);
 
         // ...

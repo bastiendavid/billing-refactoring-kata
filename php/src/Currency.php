@@ -5,9 +5,6 @@ class Currency
 {
     public string $symbol;
 
-    /**
-     * @param string $symbol
-     */
     public function __construct(string $symbol)
     {
         $this->symbol = $symbol;
