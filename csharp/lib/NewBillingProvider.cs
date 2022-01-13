@@ -14,7 +14,7 @@ namespace lib
          * @param currency The currency of the invoice. Can be "$" or "€".
          * @param customer The customer name
          */ 
-        public void SendInvoice(int amount, string currency, string companyName)
+        public virtual void SendInvoice(int amount, string currency, string companyName)
         {
             throw new Exception("You are not supposed to call this code in the kata");
         }
